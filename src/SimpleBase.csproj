@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<RootNamespace>SimpleBase</RootNamespace>
+		<AssemblyName>SimpleBase</AssemblyName>
+		<Copyright>Copyright 2014-2022 Sedat Kapanoglu</Copyright>
+		<Authors>Sedat Kapanoglu</Authors>
+		<Description>Base16, Base32, Base58, Base85 encoding/decoding library</Description>
+		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\SimpleBase.snk</AssemblyOriginatorKeyFile>
+		<DelaySign>false</DelaySign>
+
+		<PackageVersion>4.0.2</PackageVersion>
+		<DocumentationFile>SimpleBase.xml</DocumentationFile>
+		<PackageProjectUrl>https://github.com/ssg/SimpleBase</PackageProjectUrl>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageTags>base16 base32 base58 base85 ascii85 z85 hexadecimal bitcoin ripple flickr crockford extended hex rfc4648 z-base-32 geohash bech32 rfc1924</PackageTags>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReleaseNotes>
+			<![CDATA[
+## Fixes
+- Fixes #59 - Base32's `Encode(ulong)` and `DecodeUInt64()` works consistently among platforms with different endianness
+]]>
+		</PackageReleaseNotes>
+	</PropertyGroup>
+
+    <ItemGroup>
+        <None Include="../README.md" Pack="true" PackagePath="/" />
+    </ItemGroup>
+
+	<ItemGroup>
+		<None Remove="SimpleBase.net45.v3.ncrunchproject" />
+		<None Remove="SimpleBase.netstandard1.3.v3.ncrunchproject" />
+		<None Remove="SimpleBase.xml" />
+		<None Remove="stylecop.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include="stylecop.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\SimpleBase.snk" Link="SimpleBase.snk" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+*.suo
+*.user
+bin/
+obj/
+_NCrunch*/
+packages/
+*.ncrunch*
+*.nupkg
+*.psess
+*.vspx
+.vs/
+*.userprefs
+SimpleBase.xml
